@@ -7,7 +7,8 @@ LOGFORMAT = "%(asctime)s %(funcName)-10s [%(levelname)s] %(message)s"   # Log fo
 
 def main():
     logging.info("Starting job")
-    logging.info("Finish job")
+    requests.get("https://hubben-api.k8s.violaberg.nu")
+    logging.info("Finishing job")
 
 if __name__ == "__main__":
     if os.getenv("DEBUG", "false") == "true":  # Debug requested
